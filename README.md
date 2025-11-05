@@ -21,6 +21,9 @@ AI-powered email assistant for Chrome. Turn a short intent or rough draft into a
 
 ## Screenshots
 
+<img width="427" height="427" alt="1" src="https://github.com/user-attachments/assets/89908b31-5be3-4be6-b21f-696376bd15c5" />
+<img width="500" height="457" alt="3" src="https://github.com/user-attachments/assets/4c9c0af9-8e48-4117-94bf-3f6e033ec227" />
+<img width="527" height="535" alt="2" src="https://github.com/user-attachments/assets/439f5dd0-93ab-4d5d-bd34-213188690c6e" />
 
 ## Getting a Gemini API key
 
