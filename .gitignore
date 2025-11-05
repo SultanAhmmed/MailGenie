@@ -1,0 +1,28 @@
+# IDE and Editor files
+.vscode/
+.idea/
+*.sublime-*
+.DS_Store
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+~*
+
+# Node modules (if any)
+node_modules/
+
+# Build files
+dist/
+build/
+
+# Personal API keys (backup)
+*.key
+.env

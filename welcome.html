@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartWrite AI - Setup</title>
+    <link rel="stylesheet" href="assets/css/welcome.css" />
+  </head>
+  <body>
+    <div class="welcome-container">
+      <h1>✨ Welcome to SmartWrite AI</h1>
+      <p class="subtitle">AI-Powered Email Assistant with Bangla Support</p>
+
+      <div class="features">
+        <div class="feature">
+          <span class="feature-icon">🤖</span>
+          <span>Generate professional emails instantly</span>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🌍</span>
+          <span>Support for English & Bangla (বাংলা)</span>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">⚡</span>
+          <span>Auto-fill email compose fields</span>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">✉️</span>
+          <span>Works on Gmail, Outlook, Yahoo & more</span>
+        </div>
+      </div>
+
+      <div class="steps">
+        <h3>📋 How to Get Your Gemini API Key:</h3>
+        <ol>
+          <li>
+            Visit
+            <a href="https://makersuite.google.com/app/apikey" target="_blank"
+              >Google AI Studio</a
+            >
+          </li>
+          <li>Sign in with your Google account</li>
+          <li>Click "Create API Key" button</li>
+          <li>Copy the generated API key</li>
+          <li>Go to extension settings (⚙️ gear icon) in the popup</li>
+          <li>Paste your API key and click Save</li>
+        </ol>
+      </div>
+
+      <div class="setup-section">
+        <label for="apiKey">Gemini API Key:</label>
+        <input
+          type="password"
+          id="apiKey"
+          placeholder="Enter your Gemini API key"
+          autocomplete="off"
+        />
+        <p class="help-text">
+          Don't have a key? Get one free from
+          <a href="https://makersuite.google.com/app/apikey" target="_blank"
+            >Google AI Studio</a
+          >
+        </p>
+      </div>
+
+      <div class="button-container">
+        <button class="skip-btn" id="skipBtn">Skip for Now</button>
+        <button class="save-btn" id="saveBtn">Save & Continue</button>
+      </div>
+
+      <div class="status" id="status"></div>
+    </div>
+
+    <script src="js/welcome.js" defer></script>
+  </body>
+</html>

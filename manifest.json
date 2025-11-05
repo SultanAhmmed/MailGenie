@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "MailGenie",
+  "description": "AI-powered email assistant. Generate professional emails in English or Bangla with Google Gemini AI.",
+  "version": "1.0.0",
+  "author": "Sultan Ahmmed",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icons/icons.png",
+      "48": "assets/icons/icons.png",
+      "128": "assets/icons/icons.png"
+    },
+    "default_title": "MailGenie"
+  },
+  "icons": {
+    "16": "assets/icons/icons.png",
+    "48": "assets/icons/icons.png",
+    "128": "assets/icons/icons.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://mail.google.com/*",
+        "*://*.outlook.com/*",
+        "*://*.live.com/*",
+        "*://mail.yahoo.com/*",
+        "*://*.mail.yahoo.com/*"
+      ],
+      "js": ["js/content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

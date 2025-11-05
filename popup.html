@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="assets/css/popup.css" />
+  </head>
+  <body>
+    <div id="popup">
+      <div class="header">
+        <h3>MailGenie ✨</h3>
+      </div>
+
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="smartTab">
+          ✨ Lamp 
+        </button>
+        <button class="tab-btn" data-tab="settingsTab">⚙️ Settings</button>
+      </div>
+
+      <!-- Smart Email Tab -->
+      <div id="smartTab" class="tab-content active">
+        <p class="description">
+          Type intention or paste draft - AI will perfect it:
+        </p>
+        <textarea
+          id="inputText"
+          placeholder="e.g., 'Accept meeting tomorrow' OR paste your draft here..."
+          rows="4"
+        ></textarea>
+
+        <div class="options-grid">
+          <div class="option-item">
+            <label for="toneSelector">Tone:</label>
+            <select id="toneSelector">
+              <option value="professional" selected>Professional</option>
+              <option value="casual">Casual</option>
+              <option value="formal">Formal</option>
+              <option value="friendly">Friendly</option>
+              <option value="concise">Concise</option>
+            </select>
+          </div>
+
+          <div class="option-item">
+            <label for="lengthSelector">Length:</label>
+            <select id="lengthSelector">
+              <option value="short">Short</option>
+              <option value="medium" selected>Medium</option>
+              <option value="long">Detailed</option>
+            </select>
+          </div>
+
+          <div class="option-item checkbox-item">
+            <input type="checkbox" id="banglaCheckbox" />
+            <label for="banglaCheckbox">বাংলা</label>
+          </div>
+        </div>
+
+        <button id="generateBtn" class="main-action-btn">
+          ✨ Generate Perfect Email
+        </button>
+
+        <div id="output-section" style="display: none">
+          <div class="output-header">
+            <label class="output-label-main">✓ Your Perfect Email</label>
+            <button
+              id="regenerateBtn"
+              class="regenerate-btn"
+              title="Regenerate"
+            >
+              🔄
+            </button>
+          </div>
+          <label class="output-label-small">Subject:</label>
+          <input type="text" id="subjectOutput" class="output-input" />
+          <label class="output-label-small">Body:</label>
+          <textarea
+            id="outputText"
+            placeholder="AI output will appear here..."
+            rows="8"
+          ></textarea>
+          <button id="insertBtn" class="insert-btn">
+            📧 Insert into Email
+          </button>
+        </div>
+      </div>
+
+      <!-- Settings Tab -->
+      <div id="settingsTab" class="tab-content" style="display: none">
+        <h4>⚙️ Settings</h4>
+        <label class="settings-label">Gemini API Key:</label>
+        <input
+          type="password"
+          id="apiKeyInput"
+          placeholder="Enter your Gemini API key"
+          class="api-input"
+        />
+        <p class="api-help">
+          Get your free API key from
+          <a href="https://makersuite.google.com/app/apikey" target="_blank"
+            >Google AI Studio</a
+          >
+        </p>
+        <div class="settings-buttons">
+          <button id="saveApiBtn" class="save-btn">Save</button>
+        </div>
+        <div id="apiStatus" class="api-status"></div>
+      </div>
+    </div>
+    <script src="js/popup.js"></script>
+  </body>
+</html>
